@@ -1,6 +1,6 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://brbce71vvh4a0"]
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://brbce71vvh4a0"]
 
-[ext_resource type="Texture2D" uid="uid://ig2224fi4tjw" path="res://addons/mdossan_theme/disabled.tres" id="1_ncvxg"]
+[ext_resource type="Texture2D" uid="uid://ig2224fi4tjw" path="res://addons/mds_theme/disabled.tres" id="1_ncvxg"]
 
 [resource]
 texture = ExtResource("1_ncvxg")
