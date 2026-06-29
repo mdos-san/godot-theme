@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://d0idwi0m6pcka"]
+
+[ext_resource type="Texture2D" uid="uid://eltivadp85ce" path="res://addons/mds_theme/input/input_normal.png" id="1_r1jvj"]
+
+[resource]
+texture = ExtResource("1_r1jvj")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0

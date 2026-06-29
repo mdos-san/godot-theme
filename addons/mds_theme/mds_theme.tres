@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://c5ifn0g1m2hgv" path="res://addons/mds_theme/checkbox/checkbox_unchecked.png" id="4_paekx"]
 [ext_resource type="StyleBox" uid="uid://d3v5d07rrkilo" path="res://addons/mds_theme/selected_box.tres" id="4_vhp3g"]
 [ext_resource type="StyleBox" uid="uid://usqxy46qd2wb" path="res://addons/mds_theme/slider/slider.tres" id="9_3gyt8"]
+[ext_resource type="StyleBox" uid="uid://do1pju80yfbga" path="res://addons/mds_theme/input/input_focused.tres" id="11_3gyt8"]
+[ext_resource type="StyleBox" uid="uid://d0idwi0m6pcka" path="res://addons/mds_theme/input/input_normal.tres" id="11_paekx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0gle"]
 
@@ -44,9 +46,9 @@ HSlider/styles/slider = ExtResource("1_3n26i")
 ItemList/colors/font_color = Color(1, 1, 1, 1)
 ItemList/styles/panel = ExtResource("3_aaj76")
 Label/constants/outline_size = 4
-LineEdit/styles/focus = ExtResource("4_vhp3g")
-LineEdit/styles/normal = ExtResource("3_aaj76")
-LineEdit/styles/read_only = ExtResource("1_3n26i")
+LineEdit/colors/font_color = Color(0.09803922, 0.654902, 1, 1)
+LineEdit/styles/focus = ExtResource("11_3gyt8")
+LineEdit/styles/normal = ExtResource("11_paekx")
 PanelContainer/styles/panel = ExtResource("3_aaj76")
 ProgressBar/styles/background = ExtResource("1_3n26i")
 ProgressBar/styles/fill = ExtResource("3_aaj76")
