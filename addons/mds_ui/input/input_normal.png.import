@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eltivadp85ce"
-path="res://.godot/imported/input_normal.png-d348d5aca55bc5f6c6dab5af9600c652.ctex"
+path="res://.godot/imported/input_normal.png-73a3024b484084b097d0e5d834e6a303.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/mds_theme/input/input_normal.png"
-dest_files=["res://.godot/imported/input_normal.png-d348d5aca55bc5f6c6dab5af9600c652.ctex"]
+source_file="res://addons/mds_ui/input/input_normal.png"
+dest_files=["res://.godot/imported/input_normal.png-73a3024b484084b097d0e5d834e6a303.ctex"]
 
 [params]
 

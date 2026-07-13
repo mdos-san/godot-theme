@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3jm6l1ma0jtm"
-path="res://.godot/imported/input_focused.png-74f2e56647641c47c05f6a1b68b21fcb.ctex"
+path="res://.godot/imported/input_focused.png-014e4e483c0f6c1b06a3d1a6a6a38160.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/mds_theme/input/input_focused.png"
-dest_files=["res://.godot/imported/input_focused.png-74f2e56647641c47c05f6a1b68b21fcb.ctex"]
+source_file="res://addons/mds_ui/input/input_focused.png"
+dest_files=["res://.godot/imported/input_focused.png-014e4e483c0f6c1b06a3d1a6a6a38160.ctex"]
 
 [params]
 
