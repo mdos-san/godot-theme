@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="UIScreenResource" format=3 uid="uid://c6q5gdcpp6okt"]
+
+[ext_resource type="Script" uid="uid://c7w1ol8nmatj4" path="res://addons/mds_ui/ui_screens/ui_screen_resource.gd" id="1_s7d4k"]
+
+[resource]
+script = ExtResource("1_s7d4k")
+metadata/_custom_type_script = "uid://c7w1ol8nmatj4"

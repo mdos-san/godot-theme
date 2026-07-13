@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dtk6ejyxnabob"]
+
+[ext_resource type="Script" uid="uid://d3dlbnu0ei4mo" path="res://addons/mds_ui/player_in_lobby/player_in_lobby.gd" id="1_sikyh"]
+[ext_resource type="Texture2D" uid="uid://l0b0fw6xmrvi" path="res://addons/mds_ui/icons/loading_arrows.png" id="2_sikyh"]
+
+[node name="PlayerInLobby" type="GridContainer" unique_id=1601279076]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+script = ExtResource("1_sikyh")
+
+[node name="PlayerName" type="Label" parent="." unique_id=1171153867]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player Name"
+
+[node name="PlayerSyncStatus" type="TextureRect" parent="." unique_id=1390055562]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_sikyh")

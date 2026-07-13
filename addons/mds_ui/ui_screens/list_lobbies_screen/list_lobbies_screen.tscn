@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c546tkfrbve58"]
+
+[ext_resource type="Theme" uid="uid://b8fssrpnbrrtv" path="res://addons/mds_ui/mds_theme.tres" id="1_3lr1u"]
+[ext_resource type="Script" uid="uid://2k5pfvfmoecv" path="res://addons/mds_ui/ui_screens/list_lobbies_screen/list_lobbies_screen.gd" id="1_jxdeb"]
+
+[node name="Lobbies" type="CenterContainer" unique_id=72280163]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3lr1u")
+script = ExtResource("1_jxdeb")
+
+[node name="Stack" type="VBoxContainer" parent="." unique_id=1757501736]
+layout_mode = 2
+
+[node name="LobbiesAvailable" type="VBoxContainer" parent="Stack" unique_id=1451266170]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Stack" unique_id=614509673]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back
+"
+
+[connection signal="pressed" from="Stack/Back" to="." method="_on_back_pressed"]

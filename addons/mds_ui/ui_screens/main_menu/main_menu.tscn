@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b8lcrm033yfta"]
+
+[ext_resource type="Theme" uid="uid://b8fssrpnbrrtv" path="res://addons/mds_ui/mds_theme.tres" id="1_b52ta"]
+[ext_resource type="Script" uid="uid://d0ci04smm6hxn" path="res://addons/mds_ui/ui_screens/main_menu/main_menu.gd" id="1_u7n8c"]
+
+[node name="MainMenu" type="CenterContainer" unique_id=175361766]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b52ta")
+script = ExtResource("1_u7n8c")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=270190932]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Title" type="Label" parent="Layout" unique_id=202024353]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Game Title"
+
+[node name="PlayerNameInput" type="LineEdit" parent="Layout" unique_id=835081623]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Choose a player name !"
+
+[node name="Buttons" type="VBoxContainer" parent="Layout" unique_id=702045180]
+layout_mode = 2
+
+[node name="CreateLobbyButton" type="Button" parent="Layout/Buttons" unique_id=201727848]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Create Lobby"
+
+[node name="JoinLobbyButton" type="Button" parent="Layout/Buttons" unique_id=1447019566]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Join Lobby"
+
+[connection signal="text_changed" from="Layout/PlayerNameInput" to="." method="_on_player_name_changed"]
+[connection signal="pressed" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_create_lobby_button_pressed"]
+[connection signal="pressed" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_join_lobby_button_pressed"]

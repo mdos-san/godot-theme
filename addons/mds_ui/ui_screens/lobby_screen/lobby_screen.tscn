@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d3mff8e08425t"]
+
+[ext_resource type="Script" uid="uid://c5ciemkvmx7r8" path="res://addons/mds_ui/ui_screens/lobby_screen/lobby_screen.gd" id="1_df4c4"]
+[ext_resource type="Theme" uid="uid://b8fssrpnbrrtv" path="res://addons/mds_ui/mds_theme.tres" id="1_w05vx"]
+
+[node name="Lobby" type="CenterContainer" unique_id=851817790]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_w05vx")
+script = ExtResource("1_df4c4")
+
+[node name="Stack" type="VBoxContainer" parent="." unique_id=170496260]
+layout_mode = 2
+
+[node name="LobbyTitle" type="Label" parent="Stack" unique_id=1413827442]
+layout_mode = 2
+text = "Lobby"
+
+[node name="PlayersInLobby" type="VBoxContainer" parent="Stack" unique_id=454225708]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Stack" unique_id=1212051597]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start Game"
+
+[connection signal="pressed" from="Stack/StartButton" to="." method="_on_start_button_pressed"]
