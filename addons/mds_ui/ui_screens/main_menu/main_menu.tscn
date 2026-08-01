@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://b8fssrpnbrrtv" path="res://addons/mds_ui/mds_theme.tres" id="1_b52ta"]
 [ext_resource type="Script" uid="uid://d0ci04smm6hxn" path="res://addons/mds_ui/ui_screens/main_menu/main_menu.gd" id="1_u7n8c"]
+[ext_resource type="AudioStream" uid="uid://cnd4cd0arb7m" path="res://assets/sfx/UI/UI_Click_Distinct_mono.wav" id="3_dhut5"]
+[ext_resource type="AudioStream" uid="uid://hhd8gp5hncma" path="res://assets/sfx/UI/UI_Click_Tap_41_mono.wav" id="4_cbyjk"]
 
 [node name="MainMenu" type="CenterContainer" unique_id=175361766]
 anchors_preset = 15
@@ -43,6 +45,26 @@ layout_mode = 2
 disabled = true
 text = "Join Lobby"
 
+[node name="OptionsButton" type="Button" parent="Layout/Buttons" unique_id=305204848]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Options"
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="." unique_id=2136755346]
+unique_name_in_owner = true
+stream = ExtResource("3_dhut5")
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="." unique_id=264981620]
+unique_name_in_owner = true
+stream = ExtResource("4_cbyjk")
+
 [connection signal="text_changed" from="Layout/PlayerNameInput" to="." method="_on_player_name_changed"]
+[connection signal="mouse_entered" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_mouse_entered_button"]
+[connection signal="pressed" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_click_button"]
 [connection signal="pressed" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_create_lobby_button_pressed"]
+[connection signal="mouse_entered" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_mouse_entered_button"]
+[connection signal="pressed" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_click_button"]
 [connection signal="pressed" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_join_lobby_button_pressed"]
+[connection signal="mouse_entered" from="Layout/Buttons/OptionsButton" to="." method="_on_mouse_entered_button"]
+[connection signal="pressed" from="Layout/Buttons/OptionsButton" to="." method="_on_click_button"]
+[connection signal="pressed" from="Layout/Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
