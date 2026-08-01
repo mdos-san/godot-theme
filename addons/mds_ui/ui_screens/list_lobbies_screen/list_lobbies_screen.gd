@@ -1,6 +1,6 @@
 extends CenterContainer
 
-signal ui_lobby_join_requested(lobby_id: int)
+signal ui_lobby_join_requested(lobby_id: String)
 
 var SCREEN_ID: String = "LIST_LOBBIES"
 
@@ -41,4 +41,12 @@ func on_list_lobby_data() -> void:
 			ui_lobby_join_requested.emit(lobby_id)
 			screen_resource.request_transition("LOBBY")
 		)
+		button.pressed.connect(_on_click_button)
+		button.mouse_entered.connect(_on_mouse_entered_button)
 		%LobbiesAvailable.add_child(button)
+
+func _on_mouse_entered_button() -> void:
+	%HoverAudio.play()
+
+func _on_click_button() -> void:
+	%ClickAudio.play()
