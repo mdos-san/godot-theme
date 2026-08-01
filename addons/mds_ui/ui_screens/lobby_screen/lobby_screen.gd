@@ -44,3 +44,9 @@ func on_lobby_data_changed() -> void:
 
 func _on_start_button_pressed() -> void:
 	ui_game_started.emit()
+
+func _on_mouse_entered_button() -> void:
+	%HoverAudio.play()
+
+func _on_click_button() -> void:
+	%ClickAudio.play()
