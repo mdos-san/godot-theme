@@ -4,13 +4,11 @@ signal player_name_changed(new_player_name: String)
 signal lobby_creation_requested
 signal lobbies_list_requested
 
-static var SCREEN_ID: String = "MAIN"
+static var SCREEN_ID: String = "MULTIPLAYER"
 
-@export var title: String
 @export var screen_resource: UIScreenResource = preload("res://addons/mds_ui/ui_screens/main_screen_resource.tres")
 
 func _ready() -> void:
-	%Title.text = title
 	screen_resource.transition_requested.connect(on_screen_transition)
 	on_screen_transition(screen_resource.current_screen_id)
 
