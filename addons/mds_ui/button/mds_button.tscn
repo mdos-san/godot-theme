@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3ivytw0obm3h"]
+
+[ext_resource type="Script" uid="uid://r2fnmhwqa0bn" path="res://addons/mds_ui/button/mds_button.gd" id="1_ue7ou"]
+
+[node name="MdsButton" type="Button" unique_id=1695576574]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ue7ou")
+
+[node name="AudioHover" type="AudioStreamPlayer" parent="." unique_id=2096918000]
+unique_name_in_owner = true
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="." unique_id=1892784875]
+unique_name_in_owner = true
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
