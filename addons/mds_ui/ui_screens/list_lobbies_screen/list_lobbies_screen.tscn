@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b8fssrpnbrrtv" path="res://addons/mds_ui/mds_theme.tres" id="1_3lr1u"]
 [ext_resource type="Script" uid="uid://2k5pfvfmoecv" path="res://addons/mds_ui/ui_screens/list_lobbies_screen/list_lobbies_screen.gd" id="1_jxdeb"]
+[ext_resource type="PackedScene" uid="uid://3ivytw0obm3h" path="res://addons/mds_ui/button/mds_button.tscn" id="3_qv4f8"]
 [ext_resource type="AudioStream" uid="uid://cnd4cd0arb7m" path="res://assets/sfx/UI/UI_Click_Distinct_mono.wav" id="3_sda0t"]
 [ext_resource type="AudioStream" uid="uid://hhd8gp5hncma" path="res://assets/sfx/UI/UI_Click_Tap_41_mono.wav" id="4_qv4f8"]
 
@@ -21,11 +22,10 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Back" type="Button" parent="Stack" unique_id=614509673]
+[node name="Back" parent="Stack" unique_id=1695576574 instance=ExtResource("3_qv4f8")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Back
-"
+text = "Back"
 
 [node name="HoverAudio" type="AudioStreamPlayer" parent="." unique_id=997180485]
 unique_name_in_owner = true
@@ -35,6 +35,4 @@ stream = ExtResource("3_sda0t")
 unique_name_in_owner = true
 stream = ExtResource("4_qv4f8")
 
-[connection signal="mouse_entered" from="Stack/Back" to="." method="_on_mouse_entered_button"]
-[connection signal="pressed" from="Stack/Back" to="." method="_on_click_button"]
 [connection signal="pressed" from="Stack/Back" to="." method="_on_back_pressed"]

@@ -7,6 +7,8 @@ var SCREEN_ID: String = "LIST_LOBBIES"
 @export var list_lobby_data: MdsAvailableLobbiesState = preload("res://addons/mds_webrtc/mds_available_lobbies_state.tres")
 @export var screen_resource: UIScreenResource = preload("res://addons/mds_ui/ui_screens/main_screen_resource.tres")
 
+var mds_button_scene: PackedScene = preload("res://addons/mds_ui/button/mds_button.tscn")
+
 func _ready() -> void:
 	screen_resource.transition_requested.connect(on_screen_transition)
 	on_screen_transition(screen_resource.current_screen_id)
@@ -35,18 +37,10 @@ func on_list_lobby_data() -> void:
 	for lobby in list_lobby_data.lobbies:
 		var lobby_id: String = lobby["lobbyId"]
 		var lobby_name: String = lobby["lobbyName"]
-		var button = Button.new()
+		var button: MdsButton = mds_button_scene.instantiate()
 		button.text = lobby_name
 		button.pressed.connect(func(): 
 			ui_lobby_join_requested.emit(lobby_id)
 			screen_resource.request_transition("LOBBY")
 		)
-		button.pressed.connect(_on_click_button)
-		button.mouse_entered.connect(_on_mouse_entered_button)
 		%LobbiesAvailable.add_child(button)
-
-func _on_mouse_entered_button() -> void:
-	%HoverAudio.play()
-
-func _on_click_button() -> void:
-	%ClickAudio.play()
