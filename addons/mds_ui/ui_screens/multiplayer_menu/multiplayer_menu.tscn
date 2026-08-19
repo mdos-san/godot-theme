@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://b8fssrpnbrrtv" path="res://addons/mds_ui/mds_theme.tres" id="1_b52ta"]
 [ext_resource type="Script" uid="uid://d0ci04smm6hxn" path="res://addons/mds_ui/ui_screens/multiplayer_menu/multiplayer_menu.gd" id="1_u7n8c"]
 [ext_resource type="AudioStream" uid="uid://cnd4cd0arb7m" path="res://assets/sfx/UI/UI_Click_Distinct_mono.wav" id="3_dhut5"]
+[ext_resource type="PackedScene" uid="uid://3ivytw0obm3h" path="res://addons/mds_ui/button/mds_button.tscn" id="3_teqt2"]
 [ext_resource type="AudioStream" uid="uid://hhd8gp5hncma" path="res://assets/sfx/UI/UI_Click_Tap_41_mono.wav" id="4_cbyjk"]
 
 [node name="MultiplayerMenu" type="CenterContainer" unique_id=175361766]
@@ -18,6 +19,7 @@ script = ExtResource("1_u7n8c")
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme_override_constants/separation = 64
+alignment = 1
 
 [node name="PlayerNameInput" type="LineEdit" parent="Layout" unique_id=835081623]
 unique_name_in_owner = true
@@ -26,14 +28,15 @@ placeholder_text = "Choose a player name !"
 
 [node name="Buttons" type="VBoxContainer" parent="Layout" unique_id=702045180]
 layout_mode = 2
+alignment = 1
 
-[node name="CreateLobbyButton" type="Button" parent="Layout/Buttons" unique_id=201727848]
+[node name="CreateLobbyButton" parent="Layout/Buttons" unique_id=1695576574 instance=ExtResource("3_teqt2")]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Create Lobby"
 
-[node name="JoinLobbyButton" type="Button" parent="Layout/Buttons" unique_id=1447019566]
+[node name="JoinLobbyButton" parent="Layout/Buttons" unique_id=1772271186 instance=ExtResource("3_teqt2")]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
@@ -48,9 +51,5 @@ unique_name_in_owner = true
 stream = ExtResource("4_cbyjk")
 
 [connection signal="text_changed" from="Layout/PlayerNameInput" to="." method="_on_player_name_changed"]
-[connection signal="mouse_entered" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_mouse_entered_button"]
-[connection signal="pressed" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_click_button"]
 [connection signal="pressed" from="Layout/Buttons/CreateLobbyButton" to="." method="_on_create_lobby_button_pressed"]
-[connection signal="mouse_entered" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_mouse_entered_button"]
 [connection signal="pressed" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_join_lobby_button_pressed"]
-[connection signal="pressed" from="Layout/Buttons/JoinLobbyButton" to="." method="_on_click_button"]

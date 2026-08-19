@@ -33,9 +33,6 @@ func _on_join_lobby_button_pressed() -> void:
 	screen_resource.request_transition("LIST_LOBBIES")
 	lobbies_list_requested.emit()
 
-func _on_options_button_pressed() -> void:
-	screen_resource.request_transition("OPTIONS")
-
 func _on_player_name_changed(new_player_name: String) -> void:
 	player_name_changed.emit(new_player_name)
 
@@ -46,9 +43,3 @@ func _on_player_name_changed(new_player_name: String) -> void:
 
 	%CreateLobbyButton.disabled = false
 	%JoinLobbyButton.disabled = false
-
-func _on_mouse_entered_button() -> void:
-	%HoverAudio.play()
-
-func _on_click_button() -> void:
-	%ClickAudio.play()
