@@ -13,7 +13,7 @@
 [ext_resource type="StyleBox" uid="uid://usqxy46qd2wb" path="res://addons/mds_ui/slider/slider.tres" id="9_3gyt8"]
 [ext_resource type="StyleBox" uid="uid://do1pju80yfbga" path="res://addons/mds_ui/input/input_focused.tres" id="11_3gyt8"]
 [ext_resource type="StyleBox" uid="uid://d0idwi0m6pcka" path="res://addons/mds_ui/input/input_normal.tres" id="11_paekx"]
-[ext_resource type="FontFile" uid="uid://dmaidwjhmn8b0" path="res://fonts/Tiny5/Tiny5-Regular.ttf" id="14_2meif"]
+[ext_resource type="FontFile" uid="uid://dmaidwjhmn8b0" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="14_2meif"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0gle"]
 
